@@ -183,7 +183,7 @@
           : false}"
       >
         <div class="svg-icon">{@html iconContour}</div>
-        <div class="name">Contour</div>
+        <div class="name">轮廓</div>
         <div
           class="caret"
           class:hidden="{!myEmbedding || myEmbedding.groupNames === null}"
@@ -268,7 +268,7 @@
           : false}"
       >
         <div class="svg-icon">{@html iconPoint}</div>
-        <div class="name">Point</div>
+        <div class="name">点</div>
         <div
           class="caret"
           class:hidden="{!myEmbedding || myEmbedding.groupNames === null}"
@@ -332,7 +332,7 @@
     >
       <div class="item" class:activated="{defaultSetting.showGrid}">
         <div class="svg-icon">{@html iconGrid}</div>
-        <div class="name">Grid</div>
+        <div class="name">网格</div>
       </div>
     </button>
     <div class="flex-gap"></div>
@@ -352,7 +352,7 @@
     >
       <div class="item" class:activated="{defaultSetting.showLabel}">
         <div class="svg-icon">{@html iconLabel}</div>
-        <div class="name">Label</div>
+        <div class="name">标注</div>
         <div class="caret" class:activated="{controlDisplayItem === 'label'}">
           <div class="svg-icon">
             {@html iconCaret}
@@ -368,7 +368,7 @@
         }}"
       >
         <div class="control-item">
-          <div class="item-header">Automatic Labeling</div>
+          <div class="item-header">自动标</div>
 
           <div class="control-row">
             <input
@@ -379,14 +379,14 @@
               bind:checked="{defaultSetting.showLabel}"
               on:input="{e => displayCheckboxChanged(e, 'label')}"
             />
-            <label for="checkbox-label">High Density Region</label>
+            <label for="checkbox-label">高密度区域</label>
           </div>
         </div>
 
         <div class="control-item slider-item">
           <div class="control-row">
             <label class="slider-label" for="slider-label-num"
-              >Number of Labels</label
+              >标注点数量</label
             >
             <span class="slider-count">0</span>
           </div>
@@ -422,7 +422,7 @@
     >
       <button class="item" class:activated="{controlDisplayItem === 'time'}">
         <div class="svg-icon">{@html iconTime}</div>
-        <div class="name">Time</div>
+        <div class="name">时间</div>
         <div class="caret" class:activated="{controlDisplayItem === 'time'}">
           <div class="svg-icon">
             {@html iconCaret}
@@ -472,7 +472,6 @@
                 </div>
               </div>
             </div>
-
             <div class="slider-svg-container">
               <svg class="slider-svg"> </svg>
             </div>

@@ -75,7 +75,7 @@
 
 <div class="footer-wrapper" bind:this="{component}">
   <dialog id="dataset-dialog" bind:this="{dialogElement}">
-    <div class="header">Choose an Embedding</div>
+    <div class="header">选择一个嵌入图谱的json文件</div>
 
     <div class="row-block">
       <div class="dataset-list">
@@ -97,14 +97,14 @@
 
     <div class="separator"></div>
 
-    <div class="header">My Own Embedding</div>
+    <div class="header">用自己的文件</div>
 
     <div class="input-form">
       <div class="row">
         <span class="row-header">
-          Data JSON URL <a
+          数据JSON链接<a
             href="https://github.com/poloclub/wizmap#use-my-own-embeddings"
-            target="_blank">(what is this?)</a
+            target="_blank">(这是什么?)</a
           >
         </span>
         <input placeholder="https://xxx.ndjson" bind:value="{dataURLInput}" />
@@ -112,9 +112,9 @@
 
       <div class="row">
         <span class="row-header">
-          Grid JSON URL <a
+          网格JSON链接<a
             href="https://github.com/poloclub/wizmap#use-my-own-embeddings"
-            target="_blank">(what is this?)</a
+            target="_blank">(这是什么?)</a
           >
         </span>
         <input placeholder="https://xxx.json" bind:value="{gridURLInput}" />
@@ -123,14 +123,14 @@
 
     <div class="button-block">
       <button class="close-button" on:click="{() => useMyEmbeddingClicked()}"
-        >Create</button
+        >创建</button
       >
 
       <button
         class="close-button"
         on:click="{() => {
           dialogElement?.close();
-        }}">Close</button
+        }}">关闭</button
       >
     </div>
   </dialog>
@@ -172,32 +172,6 @@
     <span class="name"
       ><span class="svg-icon">{@html iconWizmap}</span>WizMap
     </span>
-    <div class="splitter"></div>
-
-    <a href="https://arxiv.org/abs/2306.09328"
-      ><span class="item">
-        <span class="svg-icon">{@html iconFile}</span>
-        Paper
-      </span></a
-    >
-    <div class="splitter"></div>
-
-    <a href="https://github.com/poloclub/wizmap"
-      ><span class="item">
-        <span class="svg-icon">{@html iconGithub}</span>
-        Code
-      </span></a
-    >
-    <div class="splitter"></div>
-
-    <a href="https://youtu.be/8fJG87QVceQ"
-      ><span class="item">
-        <span class="svg-icon">{@html iconPlay}</span>
-        Video
-      </span></a
-    >
-    <div class="splitter"></div>
-
     <button
       on:click="{() => {
         datasetClicked();
